@@ -9,7 +9,7 @@ For the best experience, install "just" and "Ninja".
 
 ## Contains
 ### CMakeLists
-Boilerplate to add a executable target and use Google Test to set up a unit test target.
+Boilerplate to add an executable target, a reusable core library target, and a lightweight unit test target.
 
 ### CLI class
 A class which is meant to be subclassed from.
@@ -26,7 +26,7 @@ of three functions meant to be overridden:
 Likely, the show_version(...) function will never really need to be overridden.
 
 ### CommandRunner class
-Simple class that only contains two fields for configuring the shell and shell args to make it flexible, have a function for live changing of those variables and finally a run command to run the commands.
+Simple class that stores the shell and shell args, lets you update that configuration, and exposes a run command to execute shell commands.
 
 Example usage is cmdRunner.run_command("cat ~/.bashrc") > returns a std::string with that file's content.
 
